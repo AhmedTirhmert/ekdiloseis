@@ -1,0 +1,33 @@
+.azure-color {
+    background-color: #F4F9FF;
+}
+
+.text-color-hard {
+    color: #9AB1CC;
+}
+
+.text-color-stickhard {
+    color: #6484AA;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.image-holder {
+    width: 50px;
+    margin: 0 auto;
+}
+
+.image-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url(https://365psd.com/images/istock/previews/1009/100996291-male-avatar-profile-picture-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
