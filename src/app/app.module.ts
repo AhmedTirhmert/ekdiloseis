@@ -27,7 +27,7 @@ import { RouterModule } from '@angular/router';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(library: FaIconLibrary) {
-    library.addIconPacks(fas, fab, far)
+  constructor(library: FaIconLibrary){
+    library.addIconPacks(fas,fab,far)
   }
 }
