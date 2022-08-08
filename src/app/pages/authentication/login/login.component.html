@@ -1,0 +1,68 @@
+<div class="flex h-screen font-['Poppins'] md:flex-row">
+  <div class="basis-[100%] lg:basis-[57%] bg-login-color">
+    <nav class="flex items-center justify-between py-6 px-9 flex-col md:flex-row">
+      <div class="logo">
+        <img src="assets/send-2.png"/>
+      </div>
+      <div>
+        <p class="font-light text-sm leading-14">Don't have an account? <a class="text-[#20DC49] font-medium">Sign up!</a></p>
+      </div>
+    </nav>
+    <div class="md:w-[60%] lg:w-[40%] w-[90%] text-center" style="margin: 100px auto 0px auto">
+      <h1 class="font-semibold text-4xl leading-44 m-4">Welcome Back</h1>
+      <p>Login into your account</p>
+      <div>
+
+      </div>
+      <div></div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="my-6">
+          <input class="form-input px-4 py-3 rounded-md w-[100%]" type="text" placeholder="Email" formControlName="email" />
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert">
+            <div class="font-semibold	text-red-600 text-sm mt-2" *ngIf="email?.errors?.['required']">
+              Email is required.
+            </div>
+            <div class="font-semibold	text-red-600 text-sm mt-2" *ngIf="email?.errors?.['email']">
+              Email must be valid.
+            </div>
+          </div>
+        </div>
+        <div>
+          <input class="form-input px-4 py-3 rounded-md w-[100%]" type="password" placeholder="Password" formControlName="password"/>
+          <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="alert">
+            <div class="font-semibold	text-red-600 text-sm mt-2" *ngIf="password?.errors?.['required']">
+              Password is required.
+            </div>
+            <div class="font-semibold	text-red-600 text-sm mt-2" *ngIf="password?.errors?.['minlength']">
+              Password is minimum 5 characters.
+            </div>
+            <div class="font-semibold	text-red-600 text-sm mt-2" *ngIf="password?.errors?.['maxlength']">
+              Password is maximum 25 characters.
+            </div>
+          </div>
+        </div>
+        <div class="flex lg:flex-row flex-col lg:items-center lg:justify-between">
+          <div class="my-3">
+            <input type="checkbox" id="remember_me" class="mr-2" formControlName="remember"/>
+            <label for="remember_me">Remember me</label>
+          </div>
+          <div class="my-3">
+            <a href="#" class="text-red-400 text-sm">Recover Password</a>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="rounded-md  block w-[100%] py-3  bg-white hover:shadow-xl hover:text-black disabled:cursor-not-allowed"
+          [disabled]="!loginForm.valid"
+        >Log In</button>
+      </form>
+    </div>
+  </div>
+  <div class="basis-[0%] lg:basis-[43%] lg:visible invisible">
+    <img src="assets/linkedin-sales-solutions-B_DJO2-K22M-unsplash 1.png" class="h-full w-full"/>
+  </div>
+</div>
+
+
+
+
