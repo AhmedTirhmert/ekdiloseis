@@ -1,32 +1,33 @@
-// Modules Imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms'
-// Components Imports 
-import { AppComponent } from './app.component';
-import { RegisterComponent } from './components/auth/register/register.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-// Libraries Imports 
+import { AppComponent } from './app.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
-import { RouterModule } from '@angular/router';
+const routes:Routes = [
+  { path: "login", component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    SidebarComponent,
     RegisterComponent,
-    SidebarComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: 'register', component: RegisterComponent },
-    ])
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],
