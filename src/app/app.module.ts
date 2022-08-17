@@ -11,6 +11,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 
+
 const routes:Routes = [
   { path: "login", component: LoginComponent },
   { path: 'register', component: RegisterComponent }
