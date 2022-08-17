@@ -6,6 +6,10 @@
     color: #9AB1CC;
 }
 
+.bg-color-hard {
+    color: #9AB1CC;
+}
+
 .text-color-stickhard {
     color: #6484AA;
 }
@@ -30,4 +34,12 @@
     background-image: url(https://365psd.com/images/istock/previews/1009/100996291-male-avatar-profile-picture-vector.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.cursor-activated {
+    cursor: pointer;
+}
+
+.color-white {
+    color: white;
 }
