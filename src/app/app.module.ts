@@ -17,6 +17,8 @@ const routes:Routes = [
 ];
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import 'flowbite'
+
 
 @NgModule({
   declarations: [
