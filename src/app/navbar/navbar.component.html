@@ -1,0 +1,123 @@
+<nav class="relative box-shadow flex flex-wrap items-center justify-between px-2 pt-1 bg-white mb-2">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="flex">
+            <div class="dropdown">
+                <span #searchformobile tabindex="0" (click)="openSearchformobile($event)" class="md:hidden btn btn-ghost btn-circle">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Search</span>
+                </span>
+                <div tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-5">
+                    <input type="text" id="search-navbar" class="block bg-color-hard  p-2 pl-5 w-full text-gray-900 bg-gray-50 rounded-lg border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search...">
+                </div>
+            </div>
+            <div class="hidden relative md:block">
+                <div class="flex text-color-hard  absolute inset-y-0 right-2 items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Search icon</span>
+                </div>
+                <input type="text" id="search-navbar" class="block bg-color-hard  p-2 pl-5 w-full text-gray-900 bg-gray-50 rounded-lg border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search...">
+            </div>
+        </div>
+        <div class="hidden lg:flex lg:flex-grow items-center">
+            <ul class="flex flex-col lg:flex-row list-none ml-auto">
+                <li class="nav-item margin-auto">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="javascript:void(0)">
+                        <div class="indicator">
+                            <i class="fas fa-bell text-color-stickhard text-lg"></i>
+                            <span class="badge badge-sm color-white badge-error indicator-item">0</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item margin-auto">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="javascript:void(0)">
+                        <div class="indicator">
+                            <i class="fa fa-envelope text-color-stickhard text-lg"></i>
+                            <span class="badge badge-sm color-white badge-warning indicator-item">0</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="javascript:void(0)">
+                        <div class="image-holder">
+                            <img class="image-circle" src="" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span class="px-3 pt-4 text-color-stickhard flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                        Your Name
+                    </span>
+                    <span class="px-3 text-color-hard flex items-center text-xs uppercase leading-snug text-white hover:opacity-75">
+                        Your Job
+                    </span>
+                </li>
+                <li class="nav-item dropdown dropdown-end flex">
+                    <span tabindex="0" class="flex cursor-activated text-color-hard justify-between items-center py-2 pr-4 pl-3 w-full text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"><svg class="ml-1 w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                    <div tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-20">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdown">
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile Settings</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account Settings</a>
+                            </li>
+                        </ul>
+                        <div class="py-1">
+                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="lg:hidden flex flex-row lg:flex-row list-none ml-auto">
+            <li class="nav-item margin-auto">
+                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="javascript:void(0)">
+                    <div class="indicator">
+                        <i class="fas fa-bell text-color-stickhard text-lg"></i>
+                        <span class="badge badge-sm color-white badge-error indicator-item">0</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item margin-auto">
+                <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="javascript:void(0)">
+                    <div class="indicator">
+                        <i class="fa fa-envelope text-color-stickhard text-lg"></i>
+                        <span class="badge badge-sm color-white badge-warning indicator-item">0</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown dropdown-end">
+            <span tabindex="0" #buttonmobile (click)="closeUpDropdown($event)" class="lg:hidden text-gray-500 cursor-activated rounded-lg text-sm p-2.5 mr-1">
+            <div class="image-holder">
+                <img class="image-circle" src="" alt="">
+            </div>
+            <span class="sr-only">Profile</span>
+            </span>
+            <div tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                <div class="py-1">
+                    <span class="px-3 pt-4 text-color-stickhard flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                    Your Name
+                </span>
+                    <span class="px-3 text-color-hard flex items-center text-xs uppercase leading-snug text-white hover:opacity-75">
+                    Your Job
+                </span>
+                </div>
+
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdown">
+                    <li>
+                        <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account Settings</a>
+                    </li>
+                </ul>
+                <div class="py-1">
+                    <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
