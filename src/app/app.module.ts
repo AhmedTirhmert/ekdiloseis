@@ -1,13 +1,17 @@
+// MODULES
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AppComponent } from './app.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+// LIBRARIES
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+// COMPONENETS
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 
@@ -28,6 +32,7 @@ const routes:Routes = [
     BrowserModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms'
+import { RegisterService } from './register.service';
 
 @Component({
   selector: 'app-register',
@@ -8,13 +9,14 @@ import { FormGroup, FormControl } from '@angular/forms'
 })
 export class RegisterComponent implements OnInit {
   AppName = 'ekdiloseis';
+  showLoading = false
   registerFrom = new FormGroup({
     email: new FormControl(''),
     fullName: new FormControl(''),
     password: new FormControl(''),
     passwordConfirmation: new FormControl(''),
   })
-  constructor() { }
+  constructor(private registerService: RegisterService) { }
   ngOnInit(): void {
     this.onFormChange()
   }
@@ -46,6 +48,16 @@ export class RegisterComponent implements OnInit {
     })
   }
   submitForm() {
-    console.log(this.registerFrom);
+    this.showLoading = true
+    this.registerService.Register(this.registerFrom.value).subscribe(
+      response => {
+        this.showLoading = false
+        console.log(response)
+      },
+      error => {
+        this.showLoading = false
+        console.log(error.error.message)
+      }
+    )
   }
 }

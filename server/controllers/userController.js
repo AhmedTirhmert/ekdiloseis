@@ -7,6 +7,7 @@ const bcrypt = require("bcryptjs");
 // @route   GET /api/users/register
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
+
   const { firstName, lastName, email, password } = req.body;
   if (!firstName || !lastName || !email || !password) {
     res.status(400);
