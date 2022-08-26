@@ -49,7 +49,7 @@
             </div>
             <button type="submit" [disabled]="!registerFrom.valid"
                 class="w-full mt-3 ease-in-out duration-300 border-2 outline-none border-green-800 bg-green-800 text-white p-1.5 rounded-lg drop-shadow-md hover:border-green-800 hover:text-black hover:bg-white disabled:bg-gray-500 disabled:border-gray-500 disabled:cursor-not-allowed disabled:hover:text-white">Register</button>
-            <span class="w-full text-sm">Have an account? <a href="#" class="text-blue-600">Log in now</a></span>
+            <span class="w-full text-sm">Have an account? <a href="#" class="text-blue-600" [routerLink]="['/login']">Log in now</a></span>
         </form>
     </article>
     <article class="lg:w-1/2 2xl:w-3/4 xl:w-2/3 bg-[url('https://theinteract.net/wp-content/uploads/2015/03/background_02.jpg')] bg-cover sm:w-0">

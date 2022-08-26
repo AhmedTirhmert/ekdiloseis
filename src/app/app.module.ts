@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms
+import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -27,6 +27,7 @@ const routes:Routes = [
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

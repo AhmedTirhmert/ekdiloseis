@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
     //Password Validation
     this.registerFrom.get('password')?.valueChanges.subscribe(val => {
       if (!/^(?=.*[0-9])(?=.*[a-z0-9])(?=.*[A-Z0-9])([a-zA-Z0-9])(?=.*?[#?!@$%^&_*-]).{6,}$/.test(`${val}`)) {
-        this.registerFrom.get('password')?.setErrors({ valid: "Password must be at least 6 characters and contain at least one Number" })
+        this.registerFrom.get('password')?.setErrors({ valid: "Password must be at least 6 characters with 1 special characters and contain at least one Number" })
       } else {
         this.registerFrom.get('password')?.setErrors(null)
       }
